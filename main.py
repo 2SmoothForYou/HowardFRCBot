@@ -1,6 +1,6 @@
 import telepot
-import sys
 import time
+import emoji
 
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
@@ -15,9 +15,7 @@ bot = telepot.Bot(TOKEN)
 bot.message_loop(handle)
 print('Listening...')
 
-snowman = u'\U000026C4'
-
-bot.sendMessage(209854694, snowman)
+bot.sendMessage(209854694, emoji.snowman)
 
 while 1:
     time.sleep(10)

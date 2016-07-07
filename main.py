@@ -1,9 +1,23 @@
 import telepot
-from pprint import pprint
+import sys
+import time
 
-bot = telepot.Bot('259115532:AAHav6iX1Kgo53ECfUOBQpjMbz_oIX9gFek')
+def handle(msg):
+    content_type, chat_type, chat_id = telepot.glance(msg)
+    print(content_type, chat_type, chat_id)
 
-response = bot.getUpdates(offset = 100000001)
-bot.sendMessage(209854694, 'SUH DUDE')
+    if content_type == 'text':
+        bot.sendMessage(chat_id, msg['text'])
 
-pprint(response)
+
+TOKEN  = '259115532:AAHav6iX1Kgo53ECfUOBQpjMbz_oIX9gFek'
+bot = telepot.Bot(TOKEN)
+bot.message_loop(handle)
+print('Listening...')
+
+while 1:
+    time.sleep(10)
+
+
+
+

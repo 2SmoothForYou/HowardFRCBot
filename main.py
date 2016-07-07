@@ -15,6 +15,10 @@ bot = telepot.Bot(TOKEN)
 bot.message_loop(handle)
 print('Listening...')
 
+snowman = u'\U000026C4'
+
+bot.sendMessage(209854694, snowman)
+
 while 1:
     time.sleep(10)
 

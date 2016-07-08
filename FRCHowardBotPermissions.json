@@ -1,0 +1,30 @@
+{
+	"user":{
+		"chat":{
+			"*":{
+				"205253997":{
+					"name":"Jaime"
+					"level":"Owner"
+				},
+				"209854694":{
+					"name":"Josh"
+					"level":"Owner"
+				}
+			}
+			"Howard Bot Testing":{
+				"181446813":{
+					"name":"Linnea"
+					"level":"Moderator"
+				}
+			}
+		}
+	}
+	"permissions":{
+		"Owner":{
+			"commands":["*"]
+		}
+		"Moderator":{
+			"commands":[""]
+		}
+	}
+}

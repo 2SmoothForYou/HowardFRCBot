@@ -18,6 +18,9 @@ def handle(msg):
             bot.sendMessage(chat_id, unicode.het)
         if message.lower() == 'linnea'.lower():
             bot.sendMessage(chat_id, '*Linnea' + unicode.crown)
+        if message.lower() == 'howard, tell me a joke'.lower():
+            bot.sendMessage(chat_id, 'Once there was a snail who was tired of being slow. He went out and bought a really fast sports car and had the dealer paint a big S on each side of it. Whenever someone saw him zooming past in his new car, they would say, "Hey, look at that S-car go!"')
+
 TOKEN  = TOKEN.token
 bot = telepot.Bot(TOKEN)
 bot.message_loop(handle)

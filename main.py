@@ -5,12 +5,21 @@ import json
 import TOKEN
 
 def handle(msg):
-    content_type, chat_type, chat_id,  = telepot.glance(msg)
+    content_type, chat_type, chat_id = telepot.glance(msg)
     print(content_type, chat_type, chat_id)
+
+    jaimeID = 205253997
+    joshID = 209854694
+
+
 
     if content_type == 'text':
         message = msg['text']
+        id = msg['from']['id']
         input = message.upper()
+
+        if id == jaimeID and 'I' in input and 'LOVE' in input and 'JOSH' in input:
+            bot.sendMessage(chat_id, "But don't tell Linnea" + unicode.crown + " " + unicode.wink)
 
         if 'LINNEA' in input and 'LINNEA' + unicode.crown not in input:
             bot.sendMessage(chat_id, '*Linnea' + unicode.crown)

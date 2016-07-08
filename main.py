@@ -15,6 +15,8 @@ def handle(msg):
             bot.sendMessage(chat_id, "I'm doing just fine, thanks.")
         if message.lower() == 'shut up howard'.lower():
             bot.sendMessage(chat_id, unicode.het)
+        if message.lower() == 'linnea'.lower():
+            bot.sendMessage(chat_id, '*Linnea' + unicode.crown)
 
 
 

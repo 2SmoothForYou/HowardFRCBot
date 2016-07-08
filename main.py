@@ -10,7 +10,7 @@ def handle(msg):
 
     jaimeID = 205253997
     joshID = 209854694
-
+    howardID = 137028422
 
 
     if content_type == 'text':
@@ -21,7 +21,9 @@ def handle(msg):
         if id == jaimeID and 'I' in input and 'LOVE' in input and 'JOSH' in input:
             bot.sendMessage(chat_id, "But don't tell Linnea" + unicode.crown + " " + unicode.wink)
 
-        if 'LINNEA' in input and 'LINNEA' + unicode.crown not in input:
+        if 'GET' in input and 'REKT' in input:
+            bot.sendMessage(chat_id, 'DE_STROYED')
+        if 'LINNEA' in input and 'LINNEA' + unicode.crown not in input and '@LINNEAW' not in input:
             bot.sendMessage(chat_id, '*Linnea' + unicode.crown)
         if 'HOWARD' in input:
             if 'HOW' in input and 'ARE' in input and 'YOU' in input:
@@ -30,6 +32,8 @@ def handle(msg):
                 bot.sendMessage(chat_id, unicode.het)
             if 'JOKE' in input and 'TELL' in input:
                 bot.sendMessage(chat_id, 'Once there was a snail who was tired of being slow. He went out and bought a really fast sports car and had the dealer paint a big S on each side of it. Whenever someone saw him zooming past in his new car, they would say, "Hey, look at that S-car go!"')
+            if 'FUCK' in input and 'YOU' in input:
+                bot.sendMessage(chat_id, 'no u')
 
 TOKEN  = TOKEN.token
 bot = telepot.Bot(TOKEN)

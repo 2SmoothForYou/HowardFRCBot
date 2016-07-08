@@ -1,6 +1,6 @@
 import telepot
 import time
-import emoji
+import unicode
 import json
 
 def handle(msg):
@@ -14,7 +14,7 @@ def handle(msg):
             #replies to message
             bot.sendMessage(chat_id, "I'm doing just fine, thanks.")
         if message.lower() == 'shut up howard'.lower():
-            bot.sendMessage(chat_id, emoji.het)
+            bot.sendMessage(chat_id, unicode.het)
 
 
 

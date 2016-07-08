@@ -12,7 +12,7 @@ def handle(msg):
         message = msg['text']
         input = message.upper()
 
-        if 'LINNEA' in input:
+        if 'LINNEA' in input and 'LINNEA' + unicode.crown not in input:
             bot.sendMessage(chat_id, '*Linnea' + unicode.crown)
 
         #checks if text is equal to 'hi howard, how are you?', ignoring case

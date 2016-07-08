@@ -18,7 +18,6 @@ def handle(msg):
             bot.sendMessage(chat_id, unicode.het)
         if message.lower() == 'linnea'.lower():
             bot.sendMessage(chat_id, '*Linnea' + unicode.crown)
-print('hi')
 TOKEN  = TOKEN.token
 bot = telepot.Bot(TOKEN)
 bot.message_loop(handle)

@@ -1,27 +1,16 @@
 import telepot
 import time
-import unicode
-import json
+import jaime
+import josh
+import TOKEN
 
 def handle(msg):
     content_type, chat_type, chat_id,  = telepot.glance(msg)
     print(content_type, chat_type, chat_id)
+    jaime.update(msg)
+    josh.update(msg)
 
-    if content_type == 'text':
-        message = msg['text']
-        #checks if text is equal to 'hi howard, how are you?', ignoring case
-        if message.lower() == 'hi howard, how are you?'.lower():
-            #replies to message
-            bot.sendMessage(chat_id, "I'm doing just fine, thanks.")
-        if message.lower() == 'shut up howard'.lower():
-            bot.sendMessage(chat_id, unicode.het)
-        if message.lower() == 'linnea'.lower():
-            bot.sendMessage(chat_id, '*Linnea' + unicode.crown)
-
-
-
-TOKEN  = '259115532:AAHav6iX1Kgo53ECfUOBQpjMbz_oIX9gFek'
-bot = telepot.Bot(TOKEN)
+bot = telepot.Bot(TOKEN.token)
 bot.message_loop(handle)
 print('Listening...')
 

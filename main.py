@@ -18,9 +18,10 @@ def handle(msg):
         id = msg['from']['id']
         input = message.upper()
 
+        if '@HOWARD_G' in input:
+            bot.sendMessage(chat_id, 'Someone called for me?')
         if id == jaimeID and 'I' in input and 'LOVE' in input and 'JOSH' in input:
             bot.sendMessage(chat_id, "But don't tell Linnea" + unicode.crown + " " + unicode.wink)
-
         if 'GET' in input and 'REKT' in input:
             bot.sendMessage(chat_id, 'DE_STROYED')
         if 'LINNEA' in input and 'LINNEA' + unicode.crown not in input and '@LINNEAW' not in input:

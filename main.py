@@ -2,6 +2,7 @@ import telepot
 import time
 import unicode
 import json
+import TOKEN
 
 def handle(msg):
     content_type, chat_type, chat_id,  = telepot.glance(msg)
@@ -20,14 +21,13 @@ def handle(msg):
 
 
 
-TOKEN  = '259115532:AAHav6iX1Kgo53ECfUOBQpjMbz_oIX9gFek'
+TOKEN  = TOKEN.token
 bot = telepot.Bot(TOKEN)
 bot.message_loop(handle)
 print('Listening...')
 
 while 1:
     time.sleep(10)
-
 
 
 

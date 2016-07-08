@@ -34,7 +34,7 @@ def handle(msg):
             if 'JOKE' in input and 'TELL' in input:
                 bot.sendMessage(chat_id, 'Once there was a snail who was tired of being slow. He went out and bought a really fast sports car and had the dealer paint a big S on each side of it. Whenever someone saw him zooming past in his new car, they would say, "Hey, look at that S-car go!"')
             if 'FUCK' in input and 'YOU' in input:
-                bot.sendMessage(chat_id, 'no u')
+                bot.sendMessage(chat_id, 'no u', reply_to_message_id = msg_id)
 
 TOKEN  = TOKEN.token
 bot = telepot.Bot(TOKEN)

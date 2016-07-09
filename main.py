@@ -11,12 +11,22 @@ def handle(msg):
     jaimeID = 205253997
     joshID = 209854694
     howardID = 137028422
+    linneaID = 181446813
 
     if content_type == 'text':
         message = msg['text']
         id = msg['from']['id']
         input = message.upper()
 
+
+        if 'DOGS' in input and 'BEST' in input and id != linneaID:
+            bot.sendMessage(chat_id, '*Cats', reply_to_message_id=msg_id)
+        if 'CATS' in input and 'SUCK' in input and id != linneaID:
+            bot.sendMessage(chat_id, '*Dogs', reply_to_message_id=msg_id)
+        if 'DOGS' in input and 'BEST' in input and id == linneaID:
+            bot.sendMessage(chat_id, 'I agree!', reply_to_message_id=msg_id)
+        if 'CATS' in input and 'SUCK' in input and id == linneaID:
+            bot.sendMessage(chat_id, 'I agree!', reply_to_message_id=msg_id)
         if '@HOWARD_G' in input:
             bot.sendMessage(chat_id, 'Someone called for me?', reply_to_message_id = msg_id)
         if id == jaimeID and 'I' in input and 'LOVE' in input and 'JOSH' in input:

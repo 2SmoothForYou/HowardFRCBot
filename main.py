@@ -12,7 +12,6 @@ def handle(msg):
     joshID = 209854694
     howardID = 137028422
 
-
     if content_type == 'text':
         message = msg['text']
         id = msg['from']['id']

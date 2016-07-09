@@ -1,3 +1,4 @@
 snowman = u'\U000026C4'
 het = u'\U0000041D\U00000435\U00000442'
 crown = u'\U0001F451'
+wink = u'\U0001F609'

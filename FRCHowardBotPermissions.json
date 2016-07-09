@@ -6,15 +6,19 @@
           "name":"Jaime",
           "level":"Owner"
         },
-        "20985469":{
+        "209854694":{
           "name":"Josh",
+          "level":"Owner"
+        },
+        "181446813":{
+          "name":"Linnea",
           "level":"Owner"
         }
       },
       "Howard Bot Testing":{
         "181446813":{
           "name":"Linnea",
-          "level":"Moderator"
+          "level":"Owner"
         }
       }
     }
@@ -24,7 +28,7 @@
       "commands":["*"]
     },
     "Moderator":{
-      "commands":[""]
+      "commands":["testPerm"]
     },
     "Default":{
       "commands":[

@@ -3,17 +3,17 @@ import json
 
 def checkperms(user_id, chat_id):
     data = getpermsdata()
-    if chat_id not in data['user']['chat']:
-        if user_id in data['user']['chat']['*']:
-            level = data['user']['chat']['*'][user_id]['level']
-        else:
-            level = 'Default'
+    chatid = str(chat_id)
+    userid = str(user_id)
+    if chatid not in data['user']['chat']:
+        level = 'Default'
     else:
-        if user_id not in data['user']['chat'][chat_id]:
+        if userid not in data['user']['chat'][chatid]:
             level = 'Default'
         else:
-            level = data['user']['chat'][chat_id][user_id]['level']
-    print('Chat permissions level: ' + level)
+            level = data['user']['chat'][chatid][userid]['level']
+    if userid in data['user']['chat']['*']:
+        level = data['user']['chat']['*'][userid]['level']
     return level
 
 
@@ -26,8 +26,11 @@ def getpermsdata():
 
 def runcommand(func, options, permname, msg):
     data = getpermsdata()
-    if permname in data['permissions'][checkperms(msg.user_id, msg.chat_id)]['commands'] or '*' in data['permissions'][checkperms(msg.user_id, msg.chat_id)]['commands']:
-        func(*options)
+    print(data['user']['chat']['Howard Bot Testing']['181446813']['name'])
+    print(checkperms(msg['from']['id'], msg['chat']['id']))
+    print('User id: ' + str(msg['from']['id']))
+    if permname in data['permissions'][checkperms(msg['from']['id'], msg['chat']['id'])]['commands'] or '*' in data['permissions'][checkperms(str(msg['from']['id']), msg['from']['id'])]['commands']:
+        func(options)
 
 
 #   Welcome to the super magical explaination box :D

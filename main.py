@@ -4,9 +4,6 @@ import unicode
 import TOKEN
 import perms
 
-chat_id = ""
-user_id = ""
-msg_id = ""
 def fTestFunction(chat_id):
     bot.sendMessage(chat_id, 'Test Message')
 

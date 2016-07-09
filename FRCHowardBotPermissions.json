@@ -34,12 +34,11 @@
       ]
     }
   },
-  "active":{
+  "disable":{
     "chat":{
       "181446813": {
         "commands": [
-          "me",
-          "chat"
+          ""
         ]
       }
     }

@@ -8,7 +8,7 @@ import chat
 
 def handle(msg):
     content_type, chat_type, chat_id, msg_date, msg_id = telepot.glance(msg, long=True)
-    print(content_type, chat_type, chat_id)
+    print(msg['chat']['id'], msg['from']['id'], msg['text'])
     jaimeID = 205253997
     joshID = 209854694
     howardID = 137028422
@@ -48,6 +48,7 @@ TOKEN = TOKEN.token
 bot = telepot.Bot(TOKEN)
 bot.message_loop(handle)
 print('Listening...')
+print(bot.getMe())
 
 while 1:
     time.sleep(10)

@@ -28,7 +28,7 @@ def runcommand(func, options, permname, msg):
     data = getpermsdata()
     commandworked = False
     if permname in data['permissions'][checkperms(msg['from']['id'], msg['chat']['id'])]['commands'] or '*' in data['permissions'][checkperms(str(msg['from']['id']), msg['from']['id'])]['commands']:
-        if permname in data['active']['chat'][msg['chat']['id']]['commands'] or msg['chat']['id'] not in data['active']['chat']:
+        if permname not in data['disable']['chat'][msg['chat']['id']]['commands'] or msg['chat']['id'] not in data['disable']['chat']:
             commandworked = True
             func(options)
     print('User Trying to Access command: ' + msg['text'] +

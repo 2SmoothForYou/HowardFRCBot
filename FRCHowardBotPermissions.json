@@ -12,13 +12,7 @@
         },
         "181446813":{
           "name":"Linnea",
-          "level":"Owner"
-        }
-      },
-      "Howard Bot Testing":{
-        "181446813":{
-          "name":"Linnea",
-          "level":"Owner"
+          "level":"Moderator"
         }
       }
     }
@@ -28,12 +22,26 @@
       "commands":["*"]
     },
     "Moderator":{
-      "commands":["testPerm"]
+      "commands":[
+        "test",
+        "me",
+        "chat"
+      ]
     },
     "Default":{
       "commands":[
-        "testPerm"
+        ""
       ]
+    }
+  },
+  "active":{
+    "chat":{
+      "181446813": {
+        "commands": [
+          "me",
+          "chat"
+        ]
+      }
     }
   }
 }

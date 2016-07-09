@@ -3,9 +3,8 @@ import time
 import unicode
 import TOKEN
 import perms
+import chat
 
-def fTestFunction(chat_id):
-    bot.sendMessage(chat_id, 'Test Message')
 
 def handle(msg):
     content_type, chat_type, chat_id, msg_date, msg_id = telepot.glance(msg, long=True)
@@ -19,7 +18,11 @@ def handle(msg):
         id = msg['from']['id']
         input = message.upper()
         if '#TEST' in input:
-            perms.runcommand(fTestFunction, (chat_id), "testPerm", msg)
+            perms.runcommand(chat.c_test, msg, "test", msg)
+        if '#ME' in input:
+            perms.runcommand(chat.c_me, msg, "me", msg)
+        if '#CHAT' in input:
+            perms.runcommand(chat.c_chat, msg, "me", msg)
         if '@HOWARD_G' in input:
             bot.sendMessage(chat_id, 'Someone called for me?', reply_to_message_id=msg_id)
         if id == jaimeID and 'I' in input and 'LOVE' in input and 'JOSH' in input:
@@ -50,4 +53,5 @@ while 1:
     time.sleep(10)
 
 
-
+def getbot():
+    return bot

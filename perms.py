@@ -26,12 +26,14 @@ def getpermsdata():
 
 def runcommand(func, options, permname, msg):
     data = getpermsdata()
-    print(data['user']['chat']['Howard Bot Testing']['181446813']['name'])
-    print(checkperms(msg['from']['id'], msg['chat']['id']))
-    print('User id: ' + str(msg['from']['id']))
+    commandworked = False
     if permname in data['permissions'][checkperms(msg['from']['id'], msg['chat']['id'])]['commands'] or '*' in data['permissions'][checkperms(str(msg['from']['id']), msg['from']['id'])]['commands']:
-        func(options)
-
+        if permname in data['active']['chat'][msg['chat']['id']]['commands'] or msg['chat']['id'] not in data['active']['chat']:
+            commandworked = True
+            func(options)
+    print('User Trying to Access command: ' + msg['text'] +
+          '\nPermissions Level: ' + checkperms(msg['from']['id'], msg['chat']['id']) +
+          '\nWas command Successful in running: ' + str(commandworked))
 
 #   Welcome to the super magical explaination box :D
 #   When you originally run a command, you use runcommand()

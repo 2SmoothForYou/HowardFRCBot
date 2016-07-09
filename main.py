@@ -1,8 +1,11 @@
 import telepot
 import time
 import unicode
-import json
 import TOKEN
+import perms
+
+def fTestFunction(chat_id):
+    bot.sendMessage(chat_id, 'Test Message')
 
 #Handles all of the interactions with the bot
 def handle(msg):
@@ -30,6 +33,8 @@ def handle(msg):
 
 
         #Checks if certain conditions are met regardless of case, sometimes also checking for ID of person
+        if '#TEST' in input:
+            perms.runcommand(fTestFunction, (chat_id), "testPerm", msg)
         if 'DOGS' in input and 'BEST' in input and id != linneaID:
             bot.sendMessage(chat_id, '*Cats', reply_to_message_id=msg_id)
         if 'CATS' in input and 'SUCK' in input and id != linneaID:

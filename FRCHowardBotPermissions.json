@@ -3,28 +3,37 @@
 		"chat":{
 			"*":{
 				"205253997":{
-					"name":"Jaime"
+					"name":"Jaime",
 					"level":"Owner"
 				},
 				"209854694":{
-					"name":"Josh"
+					"name":"Josh",
+					"level":"Owner"
+				},
+				"181446813":{
+					"name":"Linnea",
+					"level":"Owner"
+				}
+			},
+			"Howard Bot Testing":{
+				"181446813":{
+					"name":"Linnea",
 					"level":"Owner"
 				}
 			}
-			"Howard Bot Testing":{
-				"181446813":{
-					"name":"Linnea"
-					"level":"Moderator"
-				}
-			}
 		}
-	}
+	},
 	"permissions":{
 		"Owner":{
 			"commands":["*"]
-		}
+		},
 		"Moderator":{
-			"commands":[""]
+			"commands":["testPerm"]
+		},
+		"Default":{
+			"commands":[
+				"testPerm"
+			]
 		}
 	}
 }
